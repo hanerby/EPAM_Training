@@ -52,19 +52,18 @@ h1{
 .list_a:hover{
     color:#C4B3E6;
 }
-.flower_section{
-
-}
 .flower_section>p,.auto_section>p,.man_section>p,.tatoo_section>p,.staff_section>p{
     line-height: 1.75em;
     font-weight: 100;    
-}
-.auto_section{
-
 }
 .footer{
     text-align: center;
 }
 .arrow_up{
     height: 2em;
+}
+.arrow_up_1{
+    position: fixed;
+    top: 2em;
+    left: 2em;
 }
