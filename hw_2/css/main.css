@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.container{
+    padding: 2em 0em;
+    margin: 0em 15em;
+    display: block;
+    border-bottom: 1px solid #C4B3E6;
+    position: relative;
+}
+h1{
+    font-size: 4em;
+}
+.anchor{
+    position: absolute;
+    top:-10em;
+}
+.header{
+    display: block;
+    margin: 0em;
+    padding: 2em 0em; 
+    position: relative;
+    max-height: 30em;
+}
+.header_logo{
+    height: 7em;
+    display: block;
+    position: absolute;
+    top: 0.5em;
+    right: 0em;    
+}
+.header_text{
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+.list_a_wrapper{
+    padding: 0em 2em;
+}
+.list_a_elem{
+    margin: 1em 0em;
+}
+.list_a{
+    transition: color 1s ease-out 0.1s;
+}
+.list_a:hover{
+    color:#C4B3E6;
+}
+.flower_section{
+
+}
+.flower_section>p,.auto_section>p,.man_section>p,.tatoo_section>p,.staff_section>p{
+    line-height: 1.75em;
+    font-weight: 100;    
+}
+.auto_section{
+
+}
+.footer{
+    text-align: center;
+}
+.arrow_up{
+    height: 2em;
+}
