@@ -18,10 +18,13 @@ body{
     text-decoration: underline;
 } */
 .list>li{
-    text-decoration: underline;
+    text-transform: lowercase;
 }
 .list>li:nth-child(n+5){
-    text-decoration: overline;
+    text-transform: uppercase;
+}
+.list>li:nth-child(2n+6){
+    text-decoration: underline;
 }
 .list__item{
     display: block;
