@@ -1,10 +1,11 @@
 *{
     margin: 0em;
     padding: 0em;
-    box-sizing: border-box;    
+    box-sizing: border-box;  
+    border:none;  
 }
 body{
-    padding: 5em 15em;
+    padding: 2em 5em;
     font-family: Arial, Helvetica, sans-serif;
 }
 .form{
@@ -16,11 +17,27 @@ body{
     background: #FBFBF8;
     box-shadow: 0px -5px 5px -5px rgba(0,0,0,0.5);
 }
+input {
+    outline: none;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #DFD9D9;
+    padding: 10 px;
+    box-sizing: border-box;
+}
 .form__row{
     /* display: block; */
     justify-content: flex-start;
     align-items: stretch;
     
+}
+.form__error {
+    color: red;
+    text-align: left;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+    display: none;
 }
 .form__row>td{
     padding: 0.75em;
