@@ -14,9 +14,7 @@ body{
 .list>li:nth-child(odd) {
     color:#2EDF2E;
 }
-/* .list>li:nth-child(5n) {
-    text-decoration: underline;
-} */
+
 .list>li{
     text-transform: lowercase;
 }
@@ -39,6 +37,7 @@ body{
     top:50px;
     left:10px;
 }
+
 .list__text__1{
  font-size: 100%;
 }
