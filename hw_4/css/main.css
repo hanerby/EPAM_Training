@@ -57,3 +57,29 @@ input {
 .form__icon{
     text-align: right;
 }
+.form__select{
+    width: 100%;
+    font-size: 1em;
+}
+.form__select{
+   padding: 0.5em 0em;
+   display: block
+   
+}
+select {
+    border-bottom: 0.3px solid #CAFAD0;
+    outline: none;
+    /*for firefox*/
+    -moz-appearance: none;
+    /*for chrome*/
+    -webkit-appearance:none;
+}
+select::-ms-expand {
+    display: none;
+}
+select:invalid {
+    border-bottom: 0.3px solid #DFD9D9;
+    outline: none;
+}
+
+  
