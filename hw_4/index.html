@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<div class="wrap">
     <div class="container">
             <table class="form">
                     <tr class="form__row">
@@ -25,9 +26,19 @@
                                 <select class="form__select"  required>
                                     <option value="">Choise a date</option>
                                     <option value="1">Fri, Feb 10 2014</option>
-                                    <option value="2">Fri, Feb 10 2014</option>
-                                    <option value="3">Fri, Feb 10 2014</option>
+                                    <option value="2">Sat, Feb 11 2014</option>
+                                    <option value="3">Sun, Feb 12 2014</option>
+                                    <option value="4">Mon, Feb 13 2014</option>
+                                    <option value="5">Tue, Feb 14 2014</option>
+                                    <option value="6">Wed, Feb 15 2014</option>
+                                    <option value="7">Thu, Feb 16 2014</option>
                                 </select>
+                                <!-- <input type="text" name="city" list="citynames">
+                                <datalist id="citynames">
+                                  <option value="Boston">
+                                  <option value="Cambridge">
+                                </datalist> -->
+                                <!-- <img class="form__select__arrow"  src="img/down-arrow.png" alt=""> -->
                             </td>
                         <td colspan="2">
                                 <select class="form__select"  required>
@@ -53,8 +64,12 @@
                                 <select class="form__select"  required>
                                     <option value="">Choise date</option>
                                     <option value="1">Fri, Feb 10 2014</option>
-                                    <option value="2">Fri, Feb 10 2014</option>
-                                    <option value="3">Fri, Feb 10 2014</option>
+                                    <option value="2">Sat, Feb 11 2014</option>
+                                    <option value="3">Sun, Feb 12 2014</option>
+                                    <option value="4">Mon, Feb 13 2014</option>
+                                    <option value="5">Tue, Feb 14 2014</option>
+                                    <option value="6">Wed, Feb 15 2014</option>
+                                    <option value="7">Thu, Feb 16 2014</option>
                                 </select>
                             </td>
                             <td colspan="2">
@@ -82,10 +97,16 @@
                         </td>
                     </tr>
                     <tr class="form__row">
-                        <td class="form__icon" colspan="8"><a href=""><img src="img/ok.png" alt="icon_ok"></a>
+                        <td class="form__icon" colspan="8"><a href="/pipki.pe" target="form__frame"><img src="img/icon_green.png" alt="icon_ok"></a>
                         </td>
                     </tr>             
-                </table>  
-    </div>     
+                </table>
+    </div>
+    <div class="container">
+        <iframe class="frame" src="/pipki.pe" frameborder="0" name="form__frame">
+                
+        </iframe>     
+    </div>
+</div>     
 </body>
 </html>

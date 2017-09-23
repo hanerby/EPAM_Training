@@ -2,41 +2,56 @@
     margin: 0em;
     padding: 0em;
     box-sizing: border-box;  
-    border:none;  
+    border:none; 
 }
 body{
     padding: 2em 5em;
     font-family: Arial, Helvetica, sans-serif;
 }
+.wrap{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    /* width: 100% */
+    min-width: 29%;    
+}
 .form{
     /* width: 100%; */
     display: flex;
     padding: 0.5em;
-    max-width: 40%;
+    min-width: 30%;
     flex-direction: column;
     background: #FBFBF8;
     box-shadow: 0px -5px 5px -5px rgba(0,0,0,0.5);
+    
+}
+.frame {
+    min-width: 40%;
+  
 }
 input {
     outline: none;
     display: block;
     width: 100%;
     border-bottom: 1px solid #DFD9D9;
-    padding: 10 px;
+    padding: 10px;
     box-sizing: border-box;
 }
 .form__row{
     /* display: block; */
-    justify-content: flex-start;
-    align-items: stretch;
-    
+    /* justify-content: flex-start;
+    align-items: stretch; */ 
+    position: relative; 
 }
 .form__error {
     color: red;
     text-align: left;
-    font-size: 12px;
+    font-size: 0.75em;
     display: block;
-    margin-top: 3px;
     display: none;
 }
 .form__row>td{
@@ -49,10 +64,11 @@ input {
     font-size: 0.9em;
 }
 .form__text__bold{
-    font-weight: 700;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 .form__row__border-bottom{
-    border-bottom: 0.3px solid #DFD9D9;
+    border-bottom: 0.5px solid #DFD9D9;
 }
 .form__icon{
     text-align: right;
@@ -60,14 +76,19 @@ input {
 .form__select{
     width: 100%;
     font-size: 1em;
+    padding: 0.5em 0em;
+    display: block;
+    position: relative;
+    cursor: pointer;
 }
-.form__select{
-   padding: 0.5em 0em;
-   display: block
-   
+.form__select__arrow{
+    display: block;
+    position: absolute;
+    right: 50px;
+    top: 100px;
 }
 select {
-    border-bottom: 0.3px solid #CAFAD0;
+    border-bottom: 0.5px solid #CAFAD0;
     outline: none;
     /*for firefox*/
     -moz-appearance: none;
@@ -78,8 +99,9 @@ select::-ms-expand {
     display: none;
 }
 select:invalid {
-    border-bottom: 0.3px solid #DFD9D9;
+    border-bottom: 0.5px solid #D68585;
     outline: none;
+   
 }
 
   
