@@ -24,6 +24,7 @@ body{
     display: flex;
     padding: 0.5em;
     min-width: 30%;
+    max-width: 80%;
     flex-direction: column;
     background: #FBFBF8;
     box-shadow: 0px -5px 5px -5px rgba(0,0,0,0.5);
@@ -76,7 +77,7 @@ input {
 .form__select{
     width: 100%;
     font-size: 1em;
-    padding: 0.5em 0em;
+    padding: 0.5em .5em;
     display: block;
     position: relative;
     cursor: pointer;
