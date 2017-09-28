@@ -72,6 +72,10 @@ select{
     appearance: none;
     text-overflow: '';
     display: flex;
+    cursor: pointer;
+}
+select:focus{
+    border: none;
 }
 .select{
     position: relative;
