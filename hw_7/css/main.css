@@ -22,7 +22,7 @@ a{
     font-style: normal;
 }
 body{
-    font-family: FontAwesome Arial, Helvetica, sans-serif;
+    font-family: FontAwesome, Arial, Helvetica, sans-serif;
 }
 .hw7-container{
     display: flex;
@@ -39,10 +39,22 @@ body{
     /* min-width: 200px;
     max-width: 1480px; */
 }
+.hw7-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px 40px;
+}
+.hw7-section-xs{
+   height: 340px;
+}
+.hw7-section-xl{
+    height: 820px;
+}
 .hw7-col{
     display: flex;
     /* max-width: 740px; */
-    min-height: 720px;
+    min-height: 220px;
     /* padding: 60px 40px; */
 }
 .hw7-col-md-1{
@@ -135,43 +147,83 @@ body{
 .hw7-col-md_bg_black{
     background-color: #161616;
 }
-.hw7-header{
-    display: flex;
-    flex-direction: column;
-    padding: 40px 50px;
-}
-.hw7-header__nav{
-    /* margin-left:40px; */
-}
 .hw7-nav{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
 }
+.hw7-nav__header{
+    margin-left: 40px;
+    padding-bottom: 140px;
+}
 .hw7-nav__elem{
     display: flex;
-    padding: 16px;
+    padding: 15px 10px;
     color: #747589;
-    font-size: 0.9em;
+    font-size: 0.8em;
+}
+.hw7-nav__elem:hover{
+    color:#deb460;
 }
 .hw7-content{
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .hw7-content__text{
+    width: 100%;
+    display: flex;
+    padding: 15px 0px;
     line-height: 1.5em;
+    word-wrap: break-word;
 }
 .hw7-content__text_s{
-    font-size: 0.9em;
+    font-size: 0.8em;
+    line-height: 2em;
 }
 .hw7-content__text_lg{
     font-size: 2em;
+    font-weight: 100;
 }
 .hw7-content__text_grey{
     color: #94918a;
 }
 .hw7-content__text_black{
     color: #343633;
+}
+.hw7-content__text_white{
+    color: white;
+}
+.hw7-content__text_orange{
+    color:#eecf8e;
+}
+.hw7-button{
+    padding: 15px;
+    border:3px solid #252b29;
+    border-radius: 20px/50%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #252b29;
+} 
+.hw7-button_s{
+    width: 170px;
+}
+progress[value] {    
+    /* Reset the default appearance */    
+    -webkit-appearance: none;    
+    -moz-appearance: none;    
+    appearance: none;    
+    background-color:black;    
+    width: 100%;    
+    height: 2px;    
+}    
+progress[value]::-webkit-progress-bar {    
+    background-color: white;     
+}    
+progress[value]::-webkit-progress-value {    
+    background-color: #252b29;     
 }
 
 
