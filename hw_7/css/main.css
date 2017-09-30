@@ -8,6 +8,22 @@ img{
     max-width: 100%;
     height: auto;
 }
+a{
+    text-decoration: none;
+}
+@font-face {
+    font-family: FontAwesome;
+    src: url(../fonts/fontawesome-webfont.eot) format('embedded-opentype'),
+         url(../fonts/fontawesome-webfont.woff) format('woff'),
+         url(../fonts/fontawesome-webfont.ttf) format('truetype'),
+         url(../fonts/fontawesome-webfont.svg) format('svg'),
+         url(../fonts/FontAwesome.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: FontAwesome Arial, Helvetica, sans-serif;
+}
 .hw7-container{
     display: flex;
     flex-direction: column;
@@ -15,13 +31,13 @@ img{
     align-items: center;
 }
 .hw7-section{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 100%;
     /* min-height: 345px; */
-    min-width: 200px;
-    max-width: 1480px;
+    /* min-width: 200px;
+    max-width: 1480px; */
 }
 .hw7-col{
     display: flex;
@@ -119,7 +135,43 @@ img{
 .hw7-col-md_bg_black{
     background-color: #161616;
 }
+.hw7-header{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 50px;
+}
+.hw7-header__nav{
+    /* margin-left:40px; */
+}
+.hw7-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.hw7-nav__elem{
+    display: flex;
+    padding: 16px;
+    color: #747589;
+    font-size: 0.9em;
+}
+.hw7-content{
 
-
+}
+.hw7-content__text{
+    line-height: 1.5em;
+}
+.hw7-content__text_s{
+    font-size: 0.9em;
+}
+.hw7-content__text_lg{
+    font-size: 2em;
+}
+.hw7-content__text_grey{
+    color: #94918a;
+}
+.hw7-content__text_black{
+    color: #343633;
+}
 
 
