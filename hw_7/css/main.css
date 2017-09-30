@@ -1,0 +1,133 @@
+*{
+    padding: 0em;
+    margin: 0em;
+    box-sizing: border-box;
+    border: 0em;
+}
+.hw7-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.hw7-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    /* min-height: 345px; */
+    min-width: 200px;
+    max-width: 1480px;
+}
+.hw7-section_bg_grey{
+    background-color: #AA9C9C;
+}
+.hw7-section_bg_pink{
+    background-color: #EEA7E4;
+}
+.hw7-section_bg_green{
+    background-color: #77EB8B;
+}
+.hw7-section_bg_blue{
+    background-color: #4141EC;
+}
+.hw7-section_bg_yellow{
+    background-color: #E8FA97;
+}
+.hw7-section_bg_white{
+    background-color: white;
+}
+.hw7-section_bg_black{
+    background-color: black;      
+}
+.hw7-section_bg_violet{
+    background-color: #642D56;  
+}
+.hw7-col{
+    display: flex;
+    max-width: 740px;
+    /* min-height: 820px; */
+    padding: 60px 40px;
+}
+.hw7-col-1{
+    width: 8,3333333333333333333333333333333%;
+}
+.hw7-col-md-2{
+    width: 16,666666666666666666666666666667%;
+}
+.hw7-col-md-3{
+    width: 25%;
+}
+.hw7-col-md-4{
+    width: 33,333333333333333333333333333333%;
+}
+.hw7-col-md-5{
+    width: 41,666666666666666666666666666667%;
+}
+.hw7-col-md-6{
+    width: 50%;
+}
+.hw7-col-md-7{
+    width: 58,333333333333333333333333333333%;
+}
+.hw7-col-md-8{
+    width: 66,666666666666666666666666666667%;
+}
+.hw7-col-md-9{
+    width: 75%;
+}
+.hw7-col-md-10{
+    width: 83,333333333333333333333333333333%;
+}
+.hw7-col-md-11{
+    width: 91,666666666666666666666666666667%;
+}
+.hw7-col-md-12{
+    width: 100%;
+}
+.hw7-col-md_bg-1{
+	width: 100%;
+	height: 100%;
+    background: url(../img/1.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.hw7-col-md_bg-2{
+	width: 100%;
+	height: 100%;
+    background: url(../img/2.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.hw7-col-md_bg-3{
+	width: 100%;
+	height: 100%;
+    background: url(../img/3.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.hw7-col-md_bg-4{
+	width: 100%;
+	height: 100%;
+    background: url(../img/4.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.hw7-col-md_bg-5{
+	width: 100%;
+	height: 100%;
+    background: url(../img/5.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.hw7-col-md_bg-6{
+	width: 100%;
+	height: 100%;
+    background: url(../img/6.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+
+
+
