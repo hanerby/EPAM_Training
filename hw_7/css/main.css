@@ -21,8 +21,13 @@ a{
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: Next; /* Гарнитура шрифта */
+    src: url(../fonts/Next.otf); /* Путь к файлу со шрифтом */
+   }
+
 body{
-    font-family: FontAwesome, Helvetica ,Arial, sans-serif;
+    font-family:Next,FontAwesome, Helvetica ,Arial, sans-serif;
 }
  /* Progress bar style */
  input[type="text"]::placeholder, input[type="email"]::placeholder{
