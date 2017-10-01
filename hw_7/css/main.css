@@ -358,6 +358,7 @@ progress[value]::-webkit-progress-value {
  .hw7-social-links__google:hover, .hw7-social-links__gl:hover, .hw7-social-links__in:hover{
      transform: scale(1.5);
  }
+ /* Back to top arrow srction */
  .hw7-arrow-up{
 
  }  
@@ -366,6 +367,7 @@ progress[value]::-webkit-progress-value {
      bottom: 1em;
      /* text-align: center; */
  }
+ /* Media and apadtive style */
 @media screen and (max-width: 1140px){ 
     .hw7-section{
         /* width: 100%; */
@@ -378,6 +380,9 @@ progress[value]::-webkit-progress-value {
     }
     .hw7-col-s_hidden{
         display: none;
+    }
+    .hw7-content-s__text_grey{
+        color:#9E9494
     }
     .hw7-col-s-1{
         flex: 1 1 0em;
@@ -460,6 +465,25 @@ progress[value]::-webkit-progress-value {
     .hw7-nav-s__header{
         padding-bottom: 2em;
     }
+    .hw7-nav{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .hw7-nav__header{
+        margin-left: 1.75em;
+        padding-bottom: 4em;
+    }
+    .hw7-nav__elem{
+        display: flex;
+        padding: 0.75em 0.4em;
+        color: #747589;
+        font-size: 0.8em;
+    }
+    .hw7-nav__elem:hover{
+        color:#deb460;
+    }
     .hw7-content-s__text_lightinggrey{
         color: #DFDBD2;
     }
@@ -467,5 +491,17 @@ progress[value]::-webkit-progress-value {
         margin: 5em auto;
     }
     
-
+}    
+@media screen and (max-width: 720px){ 
+    .hw7-content-s__text_hidden{
+        display: none;   
+    }
+    .hw7-button_center{
+        margin: 2em auto;
+    }
+    .hw7-button_l{
+        width: 250px;
+    }
+    
+}
 
