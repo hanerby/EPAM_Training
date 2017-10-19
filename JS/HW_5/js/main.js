@@ -20,27 +20,19 @@ window.onload = function() {
      
     if (from.value == null) {
         from.value =  '';
-    }else{
-        from.value = localStorage.getItem('from');
-    };
+    }else{from.value = localStorage.getItem('from');};
     //
     if (fromTime.value == null) {
         fromTime.value = '';
-    }else{
-        fromTime.value = localStorage.getItem('fromTime');
-    };
+    }else{fromTime.value = localStorage.getItem('fromTime');};
     //
     if (to.value == null) {
         to.value = '';
-    }else{
-        to.value = localStorage.getItem('toTime');
-    };
+    }else{to.value = localStorage.getItem('to');};
     //
     if (toTime.value == null) {
         toTime.value = '';
-    }else{
-        toTime.value = localStorage.getItem('toTime');
-    };
+    }else{toTime.value = localStorage.getItem('toTime');};
     //
     // if (localStorage.getItem(drink) == null) {
     //     return "";
