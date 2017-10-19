@@ -1,22 +1,17 @@
 
-var mystore = localStorage;
-console.log(mystore);
+console.log(localStorage);
+var btnClear = document.querySelectorAll('.button_clear');
 
-// // var drink = document.getElementsByName("drink");
-// var drink = document.querySelectorAll('[name="drink"]');
-// var val = localStorage.getItem('drink'); // local storage value
-// for(var i=0;i<drink.length;i++){
-//   if(drink[i].value == val){
-//       drink[i].checked = true; // marking the required radio as checked
-//   }
-// }
-// drink.addEventListener( "change" , function() {  localStorage.setItem("drink", drink.value); });
+btnClear.onclick = function(){
+    localStorage.clear();
+}
+//return information from local storage in form after reload
 window.onload = function() {
-    var from = document.querySelector('[name="from"]');
-    var fromTime = document.querySelector('[name="fromTime"]');
-    var to = document.querySelector('[name="to"]');
-    var toTime = document.querySelector('[name="toTime"]');
-    var drink = document.getElementsByName('drink');
+    var from = document.querySelector('[name="from"]'),
+        fromTime = document.querySelector('[name="fromTime"]'),
+        to = document.querySelector('[name="to"]'),
+        toTime = document.querySelector('[name="toTime"]'),
+        drink = document.getElementsByName('drink');
      
     if (from.value == null) {
         from.value =  '';
@@ -33,31 +28,47 @@ window.onload = function() {
     if (toTime.value == null) {
         toTime.value = '';
     }else{toTime.value = localStorage.getItem('toTime');};
-    //
-    // if (localStorage.getItem(drink) == null) {
-    //     return "";
-    // }else{
-    //     return localStorage.getItem(drink);
+    
+    for(let i = 0; i<drink.length;i++){
+        if (drink[i].value == null) {
+            drink[i].value =  "";
+        }else{
+            drink[i].value =  localStorage.getItem('drink');
+            drink[i].checked = true;
+        };  
+        console.log(drink[i].value)
+    }
+ 
+    // if (drink.value == null) {
+    //     drink.value =  "";
+    // }else{drink.value =  localStorage.getItem('drink');
     // };  
 };
-
+// Grab information after reload or anu event
 window.onbeforeunload = function() {
-    // var from = document.getElementsByName('from');
-    var from = document.querySelector('[name="from"]');
-    // var fromTime = document.getElementsByName('fromTime');
-    var fromTime = document.querySelector('[name="fromTime"]');
-    // var to = document.getElementsByName('to');
-    var to = document.querySelector('[name="to"]');
-    // var toTime = document.getElementsByName('toTime');
-    var toTime = document.querySelector('[name="toTime"]');
-    var drink = document.getElementsByName('drink');
-    // var drink = document.querySelectorAll('[name="drink"]');
-    // drink.addEventListener( "change" , function() {  localStorage.setItem("drink", drink.value); });
+    var from = document.querySelector('[name="from"]'),
+        fromTime = document.querySelector('[name="fromTime"]'),
+        to = document.querySelector('[name="to"]'),
+        toTime = document.querySelector('[name="toTime"]'),
+        drink = document.getElementsByName('drink');
+    // var current = localStorage.getItem("drink");
+    // for(i = 0; i< drink.length; i++){
+    //     if(drink[i].value == current){
+    //         drink[i].checked = true;
+    //       }
+    // };
+
+    for(i = 0; i< drink.length; i++){
+        if (drink[i].checked = true){
+            // drink[i].checked = true; 
+            localStorage.setItem("drink", drink[i].value); 
+            console.log(drink[i].value, localStorage.getItem('drink') );
+        }
+    };
+
     localStorage.setItem("from", from.value);
     localStorage.setItem("fromTime", fromTime.value);
     localStorage.setItem("to", to.value);
     localStorage.setItem("toTime", toTime.value);
-    localStorage.setItem("drink", drink.value);
+    // localStorage.setItem("drink", drink.value); 
 };
-
-// console.log(drink);

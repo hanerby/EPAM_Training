@@ -109,4 +109,5 @@ select:focus{
     padding: 1em 1.5em;
     border: 1px solid grey;
     border-radius: 5px/5px ;
+    cursor: pointer;
 }
