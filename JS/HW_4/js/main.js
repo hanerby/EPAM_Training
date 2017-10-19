@@ -4,7 +4,7 @@ function auto(model) {
     this.model = model;
     this.made = undefined;
     this.year = undefined;
-    this.setYear = function (year) {
+    this.setYear = function (year) { //doing with getter and setter (Object.define.property)
         var now = new Date().getFullYear();
         if(year<1900){
             throw new Error('Cannot set year, it is so old')
