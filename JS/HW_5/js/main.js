@@ -1,10 +1,11 @@
+var storage = localStorage;
+console.log(storage);
+var btnClear = document.querySelectorAll('.button_clear')[0];
 
-console.log(localStorage);
-var btnClear = document.querySelectorAll('.button_clear');
+var clearStorage = function(){
+    storage.clear();
+};
 
-btnClear.onclick = function(){
-    localStorage.clear();
-}
 //Return information from local storage in form after reload
 window.onload = function() {
     var from = document.querySelector('[name="from"]'),
