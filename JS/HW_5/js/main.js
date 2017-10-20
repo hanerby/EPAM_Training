@@ -5,7 +5,7 @@ var btnClear = document.querySelectorAll('.button_clear');
 btnClear.onclick = function(){
     localStorage.clear();
 }
-//return information from local storage in form after reload
+//Return information from local storage in form after reload
 window.onload = function() {
     var from = document.querySelector('[name="from"]'),
         fromTime = document.querySelector('[name="fromTime"]'),
@@ -30,38 +30,22 @@ window.onload = function() {
     }else{toTime.value = localStorage.getItem('toTime');};
     
     for(let i = 0; i<drink.length;i++){
-        if (drink[i].value == null) {
-            drink[i].value =  "";
-        }else{
-            drink[i].value =  localStorage.getItem('drink');
+        if (drink[i].value ==  localStorage.getItem('drink')) {
             drink[i].checked = true;
-        };  
-        console.log(drink[i].value)
-    }
- 
-    // if (drink.value == null) {
-    //     drink.value =  "";
-    // }else{drink.value =  localStorage.getItem('drink');
-    // };  
+        };
+    };
 };
-// Grab information after reload or anu event
+// Grab information after reload or any event
 window.onbeforeunload = function() {
     var from = document.querySelector('[name="from"]'),
         fromTime = document.querySelector('[name="fromTime"]'),
         to = document.querySelector('[name="to"]'),
         toTime = document.querySelector('[name="toTime"]'),
         drink = document.getElementsByName('drink');
-    // var current = localStorage.getItem("drink");
-    // for(i = 0; i< drink.length; i++){
-    //     if(drink[i].value == current){
-    //         drink[i].checked = true;
-    //       }
-    // };
 
     for(i = 0; i< drink.length; i++){
-        if (drink[i].checked = true){
-            // drink[i].checked = true; 
-            localStorage.setItem("drink", drink[i].value); 
+        if (drink[i].type == "radio" && drink[i].checked) {
+            localStorage.setItem("drink", drink[i].value);
             console.log(drink[i].value, localStorage.getItem('drink') );
         }
     };
@@ -70,5 +54,4 @@ window.onbeforeunload = function() {
     localStorage.setItem("fromTime", fromTime.value);
     localStorage.setItem("to", to.value);
     localStorage.setItem("toTime", toTime.value);
-    // localStorage.setItem("drink", drink.value); 
 };
