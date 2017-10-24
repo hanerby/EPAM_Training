@@ -34,7 +34,7 @@ DataPicker.prototype.createListenersBtn = function(next, prev){
         self.createMonth();
     });
 };
-//Create a day with property
+//Create a day with property(day = day of week(Mo, Tu and etc.))
 DataPicker.prototype.createDay = function (num, day) {
     var newDay = document.createElement('div');
     var dateEl = document.createElement('span');
@@ -43,14 +43,14 @@ DataPicker.prototype.createDay = function (num, day) {
     dateEl.innerHTML = num;
 
     if (num === 1) {
-      var offset = ((day ) * 14.28)
+      var offset = ((day ) * 14.28);
       if (offset > 0) {
-        newDay.style.marginLeft = offset + '%'
+        newDay.style.marginLeft = offset + '%';
       };
     };
 
     if (this.date.toString() === this.todaysDate.toString()) {
-      newDay.classList.add('cal__date_today')
+      newDay.classList.add('cal__date_today');
     };
 
     newDay.appendChild(dateEl);
@@ -58,7 +58,7 @@ DataPicker.prototype.createDay = function (num, day) {
 };
 //Create a month table
 DataPicker.prototype.createMonth = function () {
-    this.date.setDate(1);
+    this.date.setDate(1); // Remove a pointer on first day in month
     var currentMonth = this.date.getMonth();
     while (this.date.getMonth() === currentMonth) {
       this.createDay(this.date.getDate(), this.date.getDay());

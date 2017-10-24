@@ -13,4 +13,6 @@ var parentBlock = document.querySelector('.init-month'),
 var element = new DataPicker(parentBlock, nextBtn, prevBtn, label);
 
 element.createMonth();
-element.createListenersBtn(nextBtn, prevBtn);
+element.createListenersBtn();
+
+console.log("All ok");
