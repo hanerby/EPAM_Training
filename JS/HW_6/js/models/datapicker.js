@@ -1,62 +1,62 @@
 //class datapicker with methods
 
 var DataPicker = function() {
-      this.month = document.querySelector('.init-month'),
-    //   this.nextBtn = document.querySelector('.btn-next'),
-    //   this.prevBtn = document.querySelector('.btn-prev'),
-      this.label = document.querySelector('.label-month'),
+      this.parentBlock = parentBlock,
+      this.nextBtn = nextBtn,
+      this.prevBtn = prevBtn,
+      this.label = label,
       this.activeDates = null,
       this.date= new Date(),
       this.todaysDate= new Date(),
       this.monthArr = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 };
-
+//Parsing the month from arrow
 DataPicker.prototype.monthsAsString = function (monthIndex) {
     return this.monthArr[monthIndex];
 };
-
+//Clean all calendar table
 DataPicker.prototype.clearCalendar = function(){
-   return  this.month.innerHTML = '';
+   return  this.parentBlock.innerHTML = '';
 };
-
+//Create a listeners on point btn
 DataPicker.prototype.createListenersBtn = function(next, prev){
     var self = this;
-    next.addEventListener('click', function () {
-        self.clearCalendar()
+    this.nextBtn.addEventListener('click', function () {
+        self.clearCalendar();
         var nextMonth = self.date.getMonth() + 1;
         self.date.setMonth(nextMonth);
         self.createMonth();
     });
-    prev.addEventListener('click', function () {
-        self.clearCalendar()
+    this.prevBtn.addEventListener('click', function () {
+        self.clearCalendar();
         var prevMonth = self.date.getMonth() - 1;
         self.date.setMonth(prevMonth);
         self.createMonth();
     });
 };
-
+//Create a day with property
 DataPicker.prototype.createDay = function (num, day) {
-    var newDay = document.createElement('div')
-    var dateEl = document.createElement('span')
+    var newDay = document.createElement('div');
+    var dateEl = document.createElement('span');
+    newDay.className = 'cal__date';
     dateEl.className = 'date__num';
     dateEl.innerHTML = num;
-    newDay.className = 'cal__date';
 
     if (num === 1) {
       var offset = ((day ) * 14.28)
       if (offset > 0) {
         newDay.style.marginLeft = offset + '%'
-      }
+      };
     };
 
     if (this.date.toString() === this.todaysDate.toString()) {
       newDay.classList.add('cal__date_today')
-    }
+    };
 
-    newDay.appendChild(dateEl)
-    this.month.appendChild(newDay)
+    newDay.appendChild(dateEl);
+    this.parentBlock.appendChild(newDay);
 };
-
+//Create a month table
 DataPicker.prototype.createMonth = function () {
     this.date.setDate(1);
     var currentMonth = this.date.getMonth();

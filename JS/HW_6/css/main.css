@@ -92,7 +92,10 @@ body {
   background-color: #f6f6f6;
   padding: 0.1em;
 }
-
+.cal__date:hover {
+  background-color: #F7E2E2;
+  cursor: pointer;
+}
 .cal__date_today {
   background-color: #fffa90;
 }
