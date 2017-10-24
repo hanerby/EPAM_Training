@@ -1,6 +1,5 @@
 var storage = localStorage;
 console.log(storage);
-var btnClear = document.querySelectorAll('.button_clear')[0];
 
 var clearStorage = function(){
     storage.clear();
@@ -13,7 +12,7 @@ window.onload = function() {
         to = document.querySelector('[name="to"]'),
         toTime = document.querySelector('[name="toTime"]'),
         drink = document.getElementsByName('drink');
-     
+    // 
     if (from.value == null) {
         from.value =  '';
     }else{from.value = localStorage.getItem('from');};
@@ -47,8 +46,7 @@ window.onbeforeunload = function() {
     for(i = 0; i< drink.length; i++){
         if (drink[i].type == "radio" && drink[i].checked) {
             localStorage.setItem("drink", drink[i].value);
-            console.log(drink[i].value, localStorage.getItem('drink') );
-        }
+        };
     };
 
     localStorage.setItem("from", from.value);
