@@ -13,8 +13,8 @@ Renderer.prototype.create = function (elem, option) {
 
 }
 
-Renderer.prototype.render = function (elem_child, elem_parent) { 
-
+Renderer.prototype.render = function (elemChild, elemParent) { 
+    elemParent.appendChild(elemChild);
 };
 
 

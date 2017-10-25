@@ -11,8 +11,7 @@ var parentBlock = document.querySelector('.init-month'),
 
 
 var element = new DataPicker(parentBlock, nextBtn, prevBtn, label);
-
-element.createMonth();
-element.createListenersBtn();
-
+// element.createDOM();
+element.init();
+// Here will be a render() where we create
 console.log("All ok");
