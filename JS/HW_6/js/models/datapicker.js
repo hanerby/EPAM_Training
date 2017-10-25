@@ -73,31 +73,29 @@ DataPicker.prototype.createMonth = function () {
     this.label.innerHTML = this.monthsAsString(this.date.getMonth()) + ' ' + this.date.getFullYear();
 };
 
-// DataPicker.prototype.createDOM = function () {    
-// //create a parent
-//     var container = document.querySelector('.container');
-//     var cal = document.createElement('div');
-//     cal.classList.add('.cal');
-//     container.appendChild(cal);
-//     console.log(cal)
-//     //create a child
-//     var cal__header = document.createElement('div');
-//     var cal__week = document.createElement('div');
-//     var cal__body = document.createElement('div');
-//     cal__header.classList.add('.cal__header');
-//     cal__week.classList.add('.cal__week');
-//     cal__body.classList.add('.cal__body', 'init-month');
-//     console.log(cal__body);
-//     cal.appendChild(cal__header);
-//     cal.appendChild(cal__week);
-//     cal.appendChild(cal__body);
-//     console.log(cal)
-//     for(var i = 0; i < this.daysArr.length; i++){
-//         var xy = document.createElement('span');
-//         xy.innerHTML = this.daysArr[i];
-//         cal__week.appendChild(xy);
-//     };
-// };
+DataPicker.prototype.createDOM = function () {    
+//create a parent
+    var container = document.querySelector('.container');
+    var cal = document.createElement('div');
+    cal.classList.add('cal');
+    container.appendChild(cal);
+    //create a child
+    var cal__header = document.createElement('div');
+    var cal__week = document.createElement('div');
+    var cal__body = document.createElement('div');
+    cal__header.classList.add('cal__header');
+    cal__week.classList.add('cal__week');
+    cal__body.classList.add('cal__body', 'init-month');
+    cal.appendChild(cal__header);
+    cal.appendChild(cal__week);
+    cal.appendChild(cal__body);
+    console.log(cal)
+    for(var i = 0; i < this.daysArr.length; i++){
+        var xy = document.createElement('span');
+        xy.innerHTML = this.daysArr[i];
+        cal__week.appendChild(xy);
+    };
+};
 
 
 
