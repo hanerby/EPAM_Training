@@ -33,7 +33,7 @@ Renderer.prototype._addClasses = function (el, classes) {
     }
     else {
         for (var i = 0; i < classes.length; i++) {
-            el.classList.add(classes[i]);
+            el.className += classes[i] + ' ';
         };
     };
 };  

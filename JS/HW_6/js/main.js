@@ -3,7 +3,7 @@
 var renderer = new Renderer();
 var cal = renderer.create({
     tag: 'div',
-    classes: 'cal',
+    classes: ['cal', 'new', 'wewe'],
     childrens: [
         {
             tag: 'div',
