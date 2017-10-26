@@ -1,33 +1,40 @@
 var Renderer =  function () {
 };
-    
-Renderer.prototype.create = function (elem, option) {
-    this.elem = elem;
-
-//Here create a parent element, where the next will append a datapicker or any child element
+// Thank Vladimir, He resque all us
+Renderer.prototype.create = function (settings) {
+    var fragment = document.createDocumentFragment();
+    fragment.appendChild(this._createOneElement(settings));
+    return fragment;
 };
 
 Renderer.prototype.render = function (elemChild, elemParent) { 
-    elemParent.appendChild(elemChild);
+    return document.querySelector(elemParent).appendChild(elemChild);
 };
-var parentBlock = document.querySelector('.init-month'),
-nextBtn = document.querySelector('.btn-next'),
-prevBtn = document.querySelector('.btn-prev'),
-label = document.querySelector('.label-month');
+    
+Renderer.prototype._createOneElement = function (settings) {
+    var el = document.createElement(settings.tag);
+    this._addClasses(el, settings.classes);
+    if (settings.textContent) {
+        el.textContent = settings.textContent;
+    };   
 
-
-var renderer = new Renderer();
-
-var element1 = renderer.create(new DataPicker(), {});
-
-// renderer.render(element1, '.main1');
-// renderer.render(element2, '.main2');
-
-
-    // {
-    //     tag: 'div',
-    //     classes: ['selected-day'],
-    //     property: 'selectedDate',
-    //     countOfELement: 1,
-    //     id: 'custom123'
-    // }
+    if (settings.childrens) {
+        for (var elem = 0; elem < settings.childrens.length; elem++) {
+            el.appendChild(this._createOneElement(settings.childrens[elem]));
+        };
+    };
+    
+    return el;
+};    
+    
+Renderer.prototype._addClasses = function (el, classes) {
+    if (!Array.isArray(classes)) {
+        el.classList.add(classes);
+    }
+    else {
+        for (var i = 0; i < classes.length; i++) {
+            el.classList.add(classes[i]);
+        };
+    };
+};  
+    

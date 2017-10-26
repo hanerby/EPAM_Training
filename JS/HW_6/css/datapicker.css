@@ -9,17 +9,17 @@
     border-radius: 3px;
   }
   
-  .arrow_left, .arrow_right{
+  .btn-prev, .btn-next{
     width: 1.5em;
     height: 1.5em;
     cursor: pointer;
   }
   
-  .arrow_left{
+  .btn-prev{
     background: url(../img/arrow-left.png) no-repeat;
   }
   
-  .arrow_right{
+  .btn-next{
     background: url(../img/arrow-right.png) no-repeat;
   }
   
@@ -55,7 +55,7 @@
     font-weight: bold;
     text-align: center;
   }
-  
+
   .cal__body {
     flex-wrap: wrap;
     background-color: #fafafa;
@@ -81,4 +81,8 @@
     align-items: center;
     padding: 0.5em 0;
     border: 1px solid #e1e1e1;
+  }
+
+  .choice{
+    background-color: #BDCEEE;
   }

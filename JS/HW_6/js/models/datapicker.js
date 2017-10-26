@@ -4,15 +4,18 @@ var DataPicker = function() {
       this.nextBtn = nextBtn,
       this.prevBtn = prevBtn,
       this.label = label,
+      this.parentFoWeek = parentFoWeek,
       this.activeDates = null,
       this.date= new Date(),
       this.todaysDate= new Date(),
       this.monthArr = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-      this.daysArr = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
+      this.daysWeekArr = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
 };
 DataPicker.prototype.init = function () {
+    this.createDaysOfWeek();
     this.createMonth();
     this.createListenersBtn();
+    this.choiceDay();
 };
 //Parsing the month from arrow
 DataPicker.prototype.monthsAsString = function (monthIndex) {
@@ -23,7 +26,7 @@ DataPicker.prototype.clearCalendar = function(){
    return  this.parentBlock.innerHTML = '';
 };
 //Create a listeners on point btn
-DataPicker.prototype.createListenersBtn = function(next, prev){
+DataPicker.prototype.createListenersBtn = function(){
     var self = this;
     this.nextBtn.addEventListener('click', function () {
         self.clearCalendar();
@@ -54,7 +57,7 @@ DataPicker.prototype.createDay = function (num, day) {
     };
 
     if (this.date.toString() === this.todaysDate.toString()) {
-      newDay.classList.add('cal__date_today');
+      dateEl.classList.add('cal__date_today');
     };
 
     newDay.appendChild(dateEl);
@@ -73,32 +76,21 @@ DataPicker.prototype.createMonth = function () {
     this.label.innerHTML = this.monthsAsString(this.date.getMonth()) + ' ' + this.date.getFullYear();
 };
 
-DataPicker.prototype.createDOM = function () {    
-//create a parent
-    var container = document.querySelector('.container');
-    var cal = document.createElement('div');
-    cal.classList.add('cal');
-    container.appendChild(cal);
-    //create a child
-    var cal__header = document.createElement('div');
-    var cal__week = document.createElement('div');
-    var cal__body = document.createElement('div');
-    cal__header.classList.add('cal__header');
-    cal__week.classList.add('cal__week');
-    cal__body.classList.add('cal__body', 'init-month');
-    cal.appendChild(cal__header);
-    cal.appendChild(cal__week);
-    cal.appendChild(cal__body);
-    console.log(cal)
-    for(var i = 0; i < this.daysArr.length; i++){
+DataPicker.prototype.createDaysOfWeek = function () {
+    for(var i = 0; i < this.daysWeekArr.length; i++){
         var xy = document.createElement('span');
-        xy.innerHTML = this.daysArr[i];
-        cal__week.appendChild(xy);
+        xy.innerHTML = this.daysWeekArr[i];
+        this.parentFoWeek.appendChild(xy);
     };
 };
 
-
-
+DataPicker.prototype.choiceDay = function () {
+    this.parentBlock.addEventListener('click', function () {
+        var target = event.target;
+        console.log(target);
+        target.classList.add('choice');
+    })
+};
 
 
 
