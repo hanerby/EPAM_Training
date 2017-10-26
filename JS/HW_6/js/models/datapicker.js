@@ -85,6 +85,7 @@ DataPicker.prototype.createDaysOfWeek = function () {
 };
 
 DataPicker.prototype.choiceDay = function () {
+    var self = this;
     this.parentBlock.addEventListener('click', function () {
         var target = event.target;
         var input = document.querySelector('.form-event');
@@ -95,6 +96,7 @@ DataPicker.prototype.choiceDay = function () {
 
         console.log((box.top).toString());
         console.log(input.style.top);
+        console.log(self.date.getMonth(), self.date.getFullYear());
         input.classList.toggle('show');
         target.classList.toggle('choice');
     })

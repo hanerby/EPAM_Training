@@ -95,8 +95,6 @@
 .form-event{
     display: none;
     position: absolute;
-    width: 100%;
-    max-width: 24em;
     padding: 0.1em;
     background-color: #fff;
     box-shadow: 0 0.15em 1em 0 rgba(0, 0, 0, 0.05);
@@ -113,7 +111,7 @@
     padding: 0.75em;
 }
 .event-input{
-    padding: 1em;
+    padding: 0.75em;
 }
 .show{
     display: block;
