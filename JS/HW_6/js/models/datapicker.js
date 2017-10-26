@@ -88,10 +88,14 @@ DataPicker.prototype.choiceDay = function () {
     this.parentBlock.addEventListener('click', function () {
         var target = event.target;
         var input = document.querySelector('.event-input');
-        console.log(input);
+        var box = target.getBoundingClientRect();
+
+        input.style.top = (box.top - 50).toString() + 'px';
+        input.style.left = (box.left).toString() + 'px';
+
+        console.log((box.top).toString());
+        console.log(input.style.top);
         input.classList.toggle('show');
-        input.style.top = '100px';
-        console.log(target.getBoundingClientRect());
         target.classList.toggle('choice');
     })
 };

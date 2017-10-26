@@ -116,6 +116,7 @@
 .event-input{
     display: none;
     position: absolute;
+    padding: 1em;
 }
 .show{
     display: block;
