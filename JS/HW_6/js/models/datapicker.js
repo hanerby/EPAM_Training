@@ -87,7 +87,7 @@ DataPicker.prototype.createDaysOfWeek = function () {
 DataPicker.prototype.choiceDay = function () {
     this.parentBlock.addEventListener('click', function () {
         var target = event.target;
-        var input = document.querySelector('.event-input');
+        var input = document.querySelector('.form-event');
         var box = target.getBoundingClientRect();
 
         input.style.top = (box.top - 50).toString() + 'px';

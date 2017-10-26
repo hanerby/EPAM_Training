@@ -93,12 +93,11 @@
   }
 
 .form-event{
-    display: flex;
-    flex-direction: column;
+    display: none;
+    position: absolute;
     width: 100%;
     max-width: 24em;
-    margin: 0em auto;
-    padding: 0.25em;
+    padding: 0.1em;
     background-color: #fff;
     box-shadow: 0 0.15em 1em 0 rgba(0, 0, 0, 0.05);
     border: solid 2px #e7e9ed;
@@ -110,12 +109,10 @@
     cursor: pointer;
 }
 .btn-m{
-    width:10em;
+    width:7em;
     padding: 0.75em;
 }
 .event-input{
-    display: none;
-    position: absolute;
     padding: 1em;
 }
 .show{
