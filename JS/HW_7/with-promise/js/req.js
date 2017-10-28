@@ -7,6 +7,7 @@ exports.createReq = function (url) {
     }).then((json) => {
         console.log(json);
     }).catch((err) => {
+        reject();
         console.log(err);
     });
 };
