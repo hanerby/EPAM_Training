@@ -1,14 +1,14 @@
 var http = require('http');
 
-exports.createReq = function(option) {  
-    return new Promise(function (resolve, reject) {
+exports.createReq = (option)=> {  
+    return new Promise((resolve, reject)=> {
         http.get( option, (res) => {
-            var body = '';
+            let body = '';
             res.on('data', (data) => {
                 body += data;
             });
             res.on('end', ()=>{
-                var parseData = JSON.parse(body);
+                let parseData = JSON.parse(body);
                 resolve(parseData);
                 console.log('/////////////////');
             });

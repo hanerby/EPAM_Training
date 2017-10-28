@@ -1,12 +1,12 @@
 var http = require('http'),
     req = require('./js/req');
 
-http.createServer(function(req, res) {
-}).listen(80, function(){
+http.createServer((req, res)=> {
+}).listen(80, ()=>{
 	console.log('Server running on port 80');
 });
 
-var option = ['http://www.nbrb.by/API/ExRates/Currencies', 'http://www.nbrb.by/API/ExRates/Rates?Periodicity=0','http://www.nbrb.by/API/ExRates/Rates/145', 'http://www.nbrb.by/API/ExRates/Rates/298?onDate=2017-10-1',
+let option = ['http://www.nbrb.by/API/ExRates/Currencies', 'http://www.nbrb.by/API/ExRates/Rates?Periodicity=0','http://www.nbrb.by/API/ExRates/Rates/145', 'http://www.nbrb.by/API/ExRates/Rates/298?onDate=2017-10-1',
 'http://www.nbrb.by/API/ExRates/Rates/USD?ParamMode=2'];
 
 for(let i = 0;i<option.length;i++){
