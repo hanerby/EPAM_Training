@@ -1,17 +1,17 @@
 var http = require('http');
 
-exports.createReq = function(option) {  
-    return http.get( option, (response) => {
-        // Continuously update stream with data
-        var body = '';
-        response.on('data', (d) => {
+exports.createReq = (option)=> {  
+    return http.get( option, (res) => {
+        let body = '';
+        res.on('data', (d) => {
             body += d;
         });
-        response.on('end', ()=>{
-          var parsed = JSON.parse(body);
+        res.on('end', () =>{
+          let parsed = JSON.parse(body);
           console.log(parsed);
         });
-    }).on("error", (err) => {
-      console.log("Error: " + err.message);
+        res.on("error", (err) => {
+            console.log("Error: " + err.message)
+        });
     });
 };
