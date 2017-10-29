@@ -1,4 +1,4 @@
-var http = require('http');
+const http = require('http');
 
 exports.createReq = (option)=> {  
     return http.get( option, (res) => {
